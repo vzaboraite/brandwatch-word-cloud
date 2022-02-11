@@ -1,4 +1,16 @@
-import React from "react";
+type Topic = {
+  id: string;
+  label: string;
+  volume: number;
+  sentimentScore: number;
+  sentiment: Sentiment;
+};
+
+type Sentiment = {
+  negative: number;
+  neutral: number;
+  positive: number;
+};
 
 function App() {
   return (
