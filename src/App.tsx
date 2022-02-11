@@ -16,6 +16,7 @@ type Sentiment = {
 
 function App() {
   const [topics, setTopics] = useState<Topic[]>([]);
+  const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
 
   useEffect(() => {
     fetch("/topics.json")
@@ -26,6 +27,8 @@ function App() {
         }
       });
   }, []);
+
+  console.log("Selected topic: ", selectedTopic);
 
   return (
     <div className="App">
@@ -48,6 +51,7 @@ function App() {
                           ? " negative"
                           : " neutral")
                       }
+                      onClick={() => setSelectedTopic(topic)}
                     >
                       {topic.label}
                     </li>
