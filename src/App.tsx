@@ -60,6 +60,37 @@ function App() {
               : "Loading..."}
           </ul>
         </div>
+
+        <div className="topic-information">
+          {selectedTopic !== null && (
+            <>
+              <h2 className="information">
+                Information on topic "{selectedTopic.label}"
+              </h2>
+              <p className="volume">Total Mentions: {selectedTopic.volume}</p>
+              <ul className="sentiment">
+                <li>
+                  Positive Mentions:
+                  <span className="positive">
+                    {selectedTopic.sentiment.positive ?? 0}
+                  </span>
+                </li>
+                <li>
+                  Neutral Mentions:
+                  <span className="neutral">
+                    {selectedTopic.sentiment.neutral ?? 0}
+                  </span>
+                </li>
+                <li>
+                  Negative Mentions:
+                  <span className="negative">
+                    {selectedTopic.sentiment.negative ?? 0}
+                  </span>
+                </li>
+              </ul>
+            </>
+          )}
+        </div>
       </main>
     </div>
   );
