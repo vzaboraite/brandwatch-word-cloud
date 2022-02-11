@@ -1,3 +1,5 @@
+import React, { useEffect, useState } from "react";
+
 type Topic = {
   id: string;
   label: string;
@@ -13,6 +15,18 @@ type Sentiment = {
 };
 
 function App() {
+  const [topics, setTopics] = useState<Topic[]>([]);
+
+  useEffect(() => {
+    fetch("/topics.json")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.topics) {
+          setTopics(data.topics);
+        }
+      });
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
