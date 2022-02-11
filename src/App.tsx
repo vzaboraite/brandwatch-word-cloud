@@ -32,6 +32,31 @@ function App() {
       <header className="App-header">
         <h1>My Topics Challenge</h1>
       </header>
+      <main className="two-col-grid">
+        <div className="word-cloud">
+          <ul className="word-cloud-list">
+            {topics.length > 0
+              ? topics.map((topic) => {
+                  return (
+                    <li
+                      key={topic.id}
+                      className={
+                        "topic" +
+                        (topic.sentimentScore > 60
+                          ? " positive"
+                          : topic.sentimentScore < 40
+                          ? " negative"
+                          : " neutral")
+                      }
+                    >
+                      {topic.label}
+                    </li>
+                  );
+                })
+              : "Loading..."}
+          </ul>
+        </div>
+      </main>
     </div>
   );
 }
