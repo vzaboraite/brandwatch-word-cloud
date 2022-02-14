@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Topic } from "./types/types";
-import WordCloud from "./components/WordCloud";
+import WordCloudContainer from "./components/WordCloud";
 import TopicInformation from "./components/TopicInformation";
 
 function App() {
@@ -26,7 +26,10 @@ function App() {
         <h1>My Topics Challenge</h1>
       </header>
       <main className="two-col-grid">
-        <WordCloud topics={topics} setSelectedTopic={setSelectedTopic} />
+        <WordCloudContainer
+          topics={topics}
+          setSelectedTopic={setSelectedTopic}
+        />
 
         <TopicInformation topic={selectedTopic} />
       </main>

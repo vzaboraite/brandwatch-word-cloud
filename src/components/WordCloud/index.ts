@@ -1,1 +1,1 @@
-export {default} from "./WordCloud"
+export {default} from "./WordCloudContainer"
