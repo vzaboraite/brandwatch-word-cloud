@@ -12,3 +12,8 @@ export type Sentiment = {
   positive: number,
 };
 
+export type WordCloudData = {
+  text: string;
+  value: number;
+};
+

@@ -1,12 +1,7 @@
 import { useCallback } from "react";
 import WordCloud from "react-d3-cloud";
-import { Topic } from "../../types/types";
+import { Topic, WordCloudData } from "../../types/types";
 // import WordCloudList from "./WordCloudList";
-
-type DataCloudWord = {
-  text: string;
-  value: number;
-};
 
 type WordCloudProps = {
   topics: Topic[];
@@ -24,7 +19,7 @@ export default function WordCloudContainer({
   }));
   console.log({ data });
 
-  function handleClick(event: any, d: DataCloudWord) {
+  function handleClick(event: any, d: WordCloudData) {
     const foundTopic = topics.find((topic) => topic.label === d.text);
     if (foundTopic) {
       setSelectedTopic(foundTopic);
