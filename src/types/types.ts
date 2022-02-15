@@ -13,7 +13,8 @@ export type Sentiment = {
 };
 
 export type WordCloudData = {
-  text: string;
-  value: number;
+  text: string,
+  value: number,
+  color: string,
 };
 

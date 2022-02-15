@@ -29,6 +29,7 @@ function App() {
         <WordCloudContainer
           topics={topics}
           setSelectedTopic={setSelectedTopic}
+          selectedTopic={selectedTopic}
         />
 
         <TopicInformation topic={selectedTopic} />
