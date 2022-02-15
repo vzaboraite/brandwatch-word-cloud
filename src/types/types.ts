@@ -16,5 +16,6 @@ export type WordCloudData = {
   text: string,
   value: number,
   color: string,
+  fontSize: number
 };
 

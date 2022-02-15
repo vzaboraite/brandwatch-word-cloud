@@ -20,6 +20,7 @@ function WordCloudContainer({
     text: topic.label,
     value: topic.volume,
     color: topic === selectedTopic ? "blue" : getColorBySentimentScore(topic),
+    fontSize: getFontSizeByVolume(topic),
   }));
   console.log({ data });
 
@@ -40,6 +41,21 @@ function WordCloudContainer({
     }
   }
 
+  function getFontSizeByVolume(topic: Topic) {
+    if (topic.volume > 100) {
+      return 120;
+    } else if (topic.volume > 40) {
+      return 60;
+    } else if (topic.volume > 20) {
+      return 50;
+    } else if (topic.volume > 13) {
+      return 40;
+    } else if (topic.volume > 8) {
+      return 30;
+    } else {
+      return 20;
+    }
+  }
 
   return (
     <div className="word-cloud">
@@ -47,6 +63,7 @@ function WordCloudContainer({
         data={data}
         onWordClick={handleClick}
         fill={(d) => (d as WordCloudData).color}
+        fontSize={(d) => (d as WordCloudData).fontSize}
         rotate={0}
         random={() => salt}
       />
