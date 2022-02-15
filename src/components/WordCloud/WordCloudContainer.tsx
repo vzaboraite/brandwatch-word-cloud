@@ -67,7 +67,6 @@ function WordCloudContainer({
         rotate={0}
         random={() => salt}
       />
-      {/* <WordCloudList topics={topics} setSelectedTopic={setSelectedTopic} /> */}
     </div>
   );
 }
