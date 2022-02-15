@@ -25,7 +25,7 @@ function App() {
       <header className="App-header">
         <h1>My Topics Challenge</h1>
       </header>
-      <main className="two-col-grid">
+      <main>
         <WordCloudContainer
           topics={topics}
           setSelectedTopic={setSelectedTopic}

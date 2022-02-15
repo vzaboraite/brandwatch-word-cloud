@@ -60,9 +60,11 @@ function WordCloudContainer({
   return (
     <div className="word-cloud">
       <WordCloud
+        font={"sans-serif"}
         data={data}
         onWordClick={handleClick}
-        fill={(d) => (d as WordCloudData).color}
+        padding={5}
+        fill={(d: Word) => (d as WordCloudData).color}
         fontSize={(d) => (d as WordCloudData).fontSize}
         rotate={0}
         random={() => salt}
