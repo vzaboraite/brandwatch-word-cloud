@@ -3,9 +3,9 @@
 This is a Brandwatch front-end developer challenge, where I've created word cloud that displays the topics fetched from `topics.json` file.\
 It is deployed as GitHub pages, feel free to check it [here](https://vzaboraite.github.io/brandwatch-word-cloud/).
 
-## Fulfiled requirements
+## Fulfilled requirements
 
-**1) 6 diferent text sizes depending on mentions volume:**\
+**1) 6 different text sizes depending on mentions volume:**\
 The text size is chosen according to the topic mentions total volume. See the table below:
 
 | Topic volume  | >100 | >40 | > 20 | >13 | >8  | <=8 |
@@ -18,7 +18,7 @@ The text size is chosen according to the topic mentions total volume. See the ta
 - If the score is < 40, the topic is displayed in red;
 - All of the rest topics are displayed in grey.
 
-**3) When the topic is clicked, the information of that specific topic is diaplayed on the side:**
+**3) When the topic is clicked, the information of that specific topic is displayed on the side:**
 
 - `topic`;
 - `total volume`/mentions;
@@ -40,7 +40,7 @@ git clone https://github.com/vzaboraite/brandwatch-word-cloud.git
 2. In the project directory run:
 
 ```bash
-# to install required dependecies for the project:
+# to install required dependencies for the project:
 npm install
 
 # to start development server on http://localhost:3000:
