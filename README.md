@@ -1,46 +1,48 @@
-# Getting Started with Create React App
+# Brandwatch Word Cloud
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a Brandwatch front-end developer challenge, where I've created word cloud that displays the topics fetched from `topics.json` file.\
+It is deployed as GitHub pages, feel free to check it [here](https://vzaboraite.github.io/brandwatch-word-cloud/).
 
-## Available Scripts
+## Fulfiled requirements
 
-In the project directory, you can run:
+**1) 6 diferent text sizes depending on mentions volume:**\
+The text size is chosen according to the topic mentions total volume. See the table below:
 
-### `npm start`
+| Topic volume  | >100 | >40 | > 20 | >13 | >8  | <=8 |
+| ------------- | ---- | --- | ---- | --- | --- | --- |
+| **Text Size** | 120  | 60  | 50   | 40  | 30  | 20  |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**2) Word/topic colour depending on sentiment score:**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- If the score is > 60, the topic is displayed in green;
+- If the score is < 40, the topic is displayed in red;
+- All of the rest topics are displayed in grey.
 
-### `npm test`
+**3) When the topic is clicked, the information of that specific topic is diaplayed on the side:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `topic`;
+- `total volume`/mentions;
+- how the volume is broken down into `positive`, `neutral` and `negative` sentiments/mentions.
 
-### `npm run build`
+## Tech used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Project was bootstrapped using [Create React App](https://github.com/facebook/create-react-app) with [TypeScript](https://create-react-app.dev/docs/adding-typescript/) template.
+- To generate word cloud I used [react-d3-cloud](https://www.npmjs.com/package/react-d3-cloud) component, which is built with [d3-cloud](https://github.com/jasondavies/d3-cloud).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## To run locally
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. To clone project repository, copy the command below and run it in your terminal:
 
-### `npm run eject`
+```bash
+git clone https://github.com/vzaboraite/brandwatch-word-cloud.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. In the project directory run:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+# to install required dependecies for the project:
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+# to start development server on http://localhost:3000:
+npm start
+```
