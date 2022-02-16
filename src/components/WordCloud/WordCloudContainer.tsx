@@ -28,6 +28,9 @@ function WordCloudContainer({
     if (foundTopic) {
       setSelectedTopic(foundTopic);
     }
+    if (selectedTopic?.label === d.text) {
+      setSelectedTopic(null);
+    }
   }
 
   function getColorBySentimentScore(topic: Topic) {
