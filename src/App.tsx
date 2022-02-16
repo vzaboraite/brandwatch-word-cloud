@@ -8,7 +8,7 @@ function App() {
   const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
 
   useEffect(() => {
-    fetch("/topics.json")
+    fetch("./topics.json")
       .then((res) => res.json())
       .then((data) => {
         if (data.topics) {
