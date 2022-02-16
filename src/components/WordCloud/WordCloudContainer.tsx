@@ -22,7 +22,6 @@ function WordCloudContainer({
     color: topic === selectedTopic ? "blue" : getColorBySentimentScore(topic),
     fontSize: getFontSizeByVolume(topic),
   }));
-  console.log({ data });
 
   function handleClick(event: any, d: Word) {
     const foundTopic = topics.find((topic) => topic.label === d.text);

@@ -17,9 +17,6 @@ function App() {
       });
   }, []);
 
-  console.log("All topics: ", topics);
-  console.log("Selected topic: ", selectedTopic);
-
   return (
     <div className="App">
       <header className="App-header">
