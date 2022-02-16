@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/brandwatch-word-cloud/static/css/main.36efe2e8.css",
-    "main.js": "/brandwatch-word-cloud/static/js/main.a86bb8fc.js",
+    "main.js": "/brandwatch-word-cloud/static/js/main.fb13dfcc.js",
     "index.html": "/brandwatch-word-cloud/index.html",
     "main.36efe2e8.css.map": "/brandwatch-word-cloud/static/css/main.36efe2e8.css.map",
-    "main.a86bb8fc.js.map": "/brandwatch-word-cloud/static/js/main.a86bb8fc.js.map"
+    "main.fb13dfcc.js.map": "/brandwatch-word-cloud/static/js/main.fb13dfcc.js.map"
   },
   "entrypoints": [
     "static/css/main.36efe2e8.css",
-    "static/js/main.a86bb8fc.js"
+    "static/js/main.fb13dfcc.js"
   ]
 }
