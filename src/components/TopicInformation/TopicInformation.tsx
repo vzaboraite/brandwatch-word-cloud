@@ -1,3 +1,4 @@
+import "./styles.css";
 import { Topic } from "../../types/types";
 
 export default function TopicInformation({ topic }: { topic: Topic | null }) {

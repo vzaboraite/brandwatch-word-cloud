@@ -1,3 +1,4 @@
+import "./styles.css";
 import React, { useState } from "react";
 import WordCloud from "react-d3-cloud";
 import { Topic, WordCloudData } from "../../types/types";

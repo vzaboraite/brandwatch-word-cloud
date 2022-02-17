@@ -1,0 +1,39 @@
+/* Topic Information */
+
+.topic-information {
+  display: grid;
+  gap: 5px;
+  align-content: baseline;
+  margin-top: 50px;
+}
+
+.topic-information > h2 {
+  font-size: 1.25em;
+}
+
+.topic-information > p,
+ul > li {
+  font-size: 1.25em;
+}
+
+.topic-information > ul {
+  padding: 0;
+}
+
+.topic-information > ul > li > span {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+/* Sentiment styles */
+.positive {
+  color: green;
+}
+
+.neutral {
+  color: grey;
+}
+
+.negative {
+  color: red;
+}
